@@ -6,16 +6,17 @@
 #    By: gduchate <gduchate@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/04 12:34:39 by guillemette       #+#    #+#              #
-#    Updated: 2022/07/16 20:29:41 by gduchate         ###   ########.fr        #
+#    Updated: 2022/07/16 20:30:00 by gduchate         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS		=	main.cpp \
-				ClapTrap.cpp
+				ClapTrap.cpp \
+				ScavTrap.cpp
 
 OBJS		= ${SRCS:.cpp=.o}
 
-NAME		= clapTrap
+NAME		= scavTrap
 
 CC			= c++
 
