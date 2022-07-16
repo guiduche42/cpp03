@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: guillemetteduchateau <guillemetteduchat    +#+  +:+       +#+        */
+/*   By: gduchate <gduchate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 20:02:45 by guillemette       #+#    #+#             */
-/*   Updated: 2022/07/15 22:17:30 by guillemette      ###   ########.fr       */
+/*   Updated: 2022/07/16 19:27:07 by gduchate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,21 +25,24 @@ class ClapTrap
 		ClapTrap( ClapTrap const & src );
 		~ClapTrap();
 
-		ClapTrap &		operator=( ClapTrap const & rhs );
-
-		int				getHitPoints(void);
-		void 			attack(const std::string& target);
-		void 			takeDamage(unsigned int amount);
-		void 			beRepaired(unsigned int amount);
+		ClapTrap &			operator=( ClapTrap const & rhs );
+		//Accessors
+		std::string			getName(void) const;
+		unsigned int		getHitPoints(void) const;
+		unsigned int		getEnergyPoints(void) const;
+		unsigned int		getAttackDamage(void) const;
+		void 				attack(const std::string& target);
+		void 				takeDamage(unsigned int amount);
+		void 				beRepaired(unsigned int amount);
 
 	private:
-		std::string		_name;
-		unsigned int	_hitPoints;
-		unsigned int	_energyPoints;
-		unsigned int	_attackDamage;
+		std::string			_name;
+		unsigned int		_hitPoints;
+		unsigned int		_energyPoints;
+		unsigned int		_attackDamage;
 
 };
 
-std::ostream &			operator<<( std::ostream & o, ClapTrap const & i );
+		std::ostream &		operator<<( std::ostream & o, ClapTrap const & i );
 
 #endif /* ******************************************************** CLAPTRAP_H */

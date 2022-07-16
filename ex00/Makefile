@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: guillemetteduchateau <guillemetteduchat    +#+  +:+       +#+         #
+#    By: gduchate <gduchate@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/04 12:34:39 by guillemette       #+#    #+#              #
-#    Updated: 2022/07/14 20:02:28 by guillemette      ###   ########.fr        #
+#    Updated: 2022/07/16 19:17:06 by gduchate         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ SRCS		=	main.cpp \
 
 OBJS		= ${SRCS:.cpp=.o}
 
-NAME		= zombie
+NAME		= clapTrap
 
 CC			= c++
 
