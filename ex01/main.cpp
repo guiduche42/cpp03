@@ -6,15 +6,15 @@
 /*   By: gduchate <gduchate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 20:02:34 by guillemette       #+#    #+#             */
-/*   Updated: 2022/07/16 19:30:30 by gduchate         ###   ########.fr       */
+/*   Updated: 2022/07/17 18:36:12 by gduchate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
 int	main()
 {
 	ClapTrap myClapTrap("Guigui");
 
-	myClapTrap.attack("Enemy");
+	ScavTrap myScavTrap("Kiki");
 }

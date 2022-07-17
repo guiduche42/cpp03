@@ -19,6 +19,4 @@ class FragTrap
 
 };
 
-std::ostream &			operator<<( std::ostream & o, FragTrap const & i );
-
 #endif /* ******************************************************** FRAGTRAP_H */

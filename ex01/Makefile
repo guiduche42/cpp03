@@ -6,7 +6,7 @@
 #    By: gduchate <gduchate@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/04 12:34:39 by guillemette       #+#    #+#              #
-#    Updated: 2022/07/16 20:30:00 by gduchate         ###   ########.fr        #
+#    Updated: 2022/07/17 18:20:13 by gduchate         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ CFLAGS		= -Wall -Wextra -Werror -std=c++98
 
 RM			= rm -f
 
-${NAME}:		 ${OBJS}
+${NAME}:		 ${OBJS} ${INCS}
 	${CC} ${CFLAGS} ${OBJS} -o ${NAME}
 
 all:			${NAME}

@@ -6,7 +6,7 @@
 /*   By: gduchate <gduchate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 20:02:45 by guillemette       #+#    #+#             */
-/*   Updated: 2022/07/17 18:19:57 by gduchate         ###   ########.fr       */
+/*   Updated: 2022/07/17 18:34:39 by gduchate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ class ClapTrap
 		void 				beRepaired(unsigned int amount);
 		int					canTakeAction(void) const;
 
-	private:
+	protected:
 		std::string			_name;
 		unsigned int		_hitPoints;
 		unsigned int		_energyPoints;

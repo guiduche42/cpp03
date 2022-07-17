@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: guillemetteduchateau <guillemetteduchat    +#+  +:+       +#+        */
+/*   By: gduchate <gduchate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 20:02:34 by guillemette       #+#    #+#             */
-/*   Updated: 2022/07/17 13:01:41 by guillemette      ###   ########.fr       */
+/*   Updated: 2022/07/17 18:16:44 by gduchate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	main()
 
 	myClapTrap.attack("Enemy");
 	myClapTrap.takeDamage(5);
-	myClapTrap.beRepaired(-3);
+	myClapTrap.beRepaired(3);
 	myClapTrap.takeDamage(5);
 	myClapTrap.attack("Enemy");
 	myClapTrap.attack("Enemy");
