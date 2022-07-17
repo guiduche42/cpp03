@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gduchate <gduchate@student.42.fr>          +#+  +:+       +#+        */
+/*   By: guillemetteduchateau <guillemetteduchat    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 20:02:41 by guillemette       #+#    #+#             */
-/*   Updated: 2022/07/16 19:33:21 by gduchate         ###   ########.fr       */
+/*   Updated: 2022/07/17 13:02:21 by guillemette      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ ClapTrap::~ClapTrap()
 	std::cout << "Destructor called" << std::endl;
 }
 
-
 /*
 ** --------------------------------- OVERLOAD ---------------------------------
 */
@@ -60,42 +59,55 @@ std::ostream &			operator<<( std::ostream & o, ClapTrap const & i )
 	return o;
 }
 
-
 /*
 ** --------------------------------- METHODS ----------------------------------
 */
+
+int		ClapTrap::canTakeAction(void) const
+{
+	if (!this->_hitPoints)
+	{
+		std::cout << "ClapTrap " << this->_name << " doesn't have any hit points left and cannot take action." << std::endl;
+		return (0);
+	}
+	if (!this->_energyPoints)
+	{
+		std::cout << "ClapTrap " << this->_name << " doesn't have any energy points left and cannot take action." << std::endl;
+		return (0);
+	}
+	return (1);
+}
+
 void ClapTrap::attack(const std::string& target)
 {
-	if (!this->_energyPoints || !this->_hitPoints)
+	if (!canTakeAction())
 		return;
-	std::cout << "ClapTrap " << this->_name << " attacks " << target << ", causing " << this->_attackDamage << " points of damage!" << std::endl;
+	std::cout << "ClapTrap " << this->_name << " attacks " << target << ", causing " << this->_attackDamage << " point(s) of damage!" << std::endl;
 	this->_energyPoints--;
 }
+
 void ClapTrap::takeDamage(unsigned int amount)
 {
-	if (!this->_energyPoints || !this->_hitPoints)
-		return;
-	if (amount > this->_hitPoints)
+	if (!this->_hitPoints)
 	{
-		this->_hitPoints = 0;
-		std::cout << "ClapTrap " << this->_name << " doesn't have any hit points left." << std::endl;
-		return;
-	}
-	else
-	{
-		this->_hitPoints -= amount;
-		std::cout << "ClapTrap " << this->_name << " looses: -" << amount << "! It has now " << this->_energyPoints << " hit points." << std::endl;
+		std::cout << "ClapTrap " << this->_name << " has already 0 hit point(s)." << std::endl;
 		return ;
 	}
+	std::cout << "ClapTrap " << this->_name << " takes " << amount << " point(s) of damage!" << std::endl;
+	if (amount > this->_hitPoints)
+		this->_hitPoints = 0;
+	else
+		this->_hitPoints = this->_hitPoints - amount;
+	std::cout << "ClapTrap " << this->_name << " has now " << this->_hitPoints << " hit point(s)." << std::endl;
 }
 
 void ClapTrap::beRepaired(unsigned int amount)
 {
-	if (!this->_energyPoints || !this->_hitPoints)
+	if (!canTakeAction())
 		return;
 	this->_hitPoints += amount;
 	this->_energyPoints--;
-	std::cout << "ClapTrap " << this->_name << " repairs itself: +" << amount << "! It has now " << this->_energyPoints << " hit points." << std::endl;
+	std::cout << "ClapTrap " << this->_name << " repairs itself: +" << amount << " hit point(s)! It has now " << this->_hitPoints << " hit point(s)." << std::endl;
 }
 
 /*
@@ -108,16 +120,19 @@ std::string	ClapTrap::getName(void) const
 
 unsigned int	ClapTrap::getHitPoints(void) const
 {
+	std::cout << "ClapTrap " << this->_name << " has " << this->_hitPoints << " hit point(s)." << std::endl;
 	return (this->_hitPoints);
 }
 
 unsigned int	ClapTrap::getEnergyPoints(void) const
 {
+	std::cout << "ClapTrap " << this->_name << " has " << this->_energyPoints << " energy point(s)." << std::endl;
 	return (this->_energyPoints);
 }
 
 unsigned int	ClapTrap::getAttackDamage(void) const
 {
+	std::cout << "ClapTrap " << this->_name << " attacks with damage of " << this->_attackDamage << " point(s)." << std::endl;
 	return (this->_attackDamage);
 }
 

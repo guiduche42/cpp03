@@ -3,15 +3,17 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: gduchate <gduchate@student.42.fr>          +#+  +:+       +#+         #
+#    By: guillemetteduchateau <guillemetteduchat    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/04 12:34:39 by guillemette       #+#    #+#              #
-#    Updated: 2022/07/16 20:29:41 by gduchate         ###   ########.fr        #
+#    Updated: 2022/07/17 12:55:31 by guillemette      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS		=	main.cpp \
 				ClapTrap.cpp
+
+INCS		= ClapTrap.hpp
 
 OBJS		= ${SRCS:.cpp=.o}
 
@@ -23,7 +25,7 @@ CFLAGS		= -Wall -Wextra -Werror -std=c++98
 
 RM			= rm -f
 
-${NAME}:		 ${OBJS}
+${NAME}:		 ${OBJS} ${INCS}
 	${CC} ${CFLAGS} ${OBJS} -o ${NAME}
 
 all:			${NAME}
