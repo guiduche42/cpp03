@@ -3,17 +3,20 @@
 
 # include <iostream>
 # include <string>
+# include "ClapTrap.hpp"
 
-class FragTrap
+class FragTrap : public ClapTrap
 {
 
 	public:
 
 		FragTrap();
+		FragTrap(std::string name);
 		FragTrap( FragTrap const & src );
 		~FragTrap();
 
 		FragTrap &		operator=( FragTrap const & rhs );
+		void 			highFivesGuys(void);
 
 	private:
 

@@ -6,11 +6,12 @@
 /*   By: guillemetteduchateau <guillemetteduchat    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 20:02:34 by guillemette       #+#    #+#             */
-/*   Updated: 2022/07/24 15:20:40 by guillemette      ###   ########.fr       */
+/*   Updated: 2022/07/24 15:16:31 by guillemette      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int	main()
 {
@@ -20,7 +21,8 @@ int	main()
 
 	myScavTrap.guardGate();
 	myScavTrap.attack("Target");
-	myClapTrap.attack("Target");
-	std::string test=	myScavTrap.getName();
-	std::cout << test << std::endl;
+
+	FragTrap myFragTrap("Nina");
+	myFragTrap.highFivesGuys();
+	myFragTrap.beRepaired(5);
 }
