@@ -6,7 +6,7 @@
 /*   By: guillemetteduchateau <guillemetteduchat    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 20:02:41 by guillemette       #+#    #+#             */
-/*   Updated: 2022/07/24 15:25:23 by guillemette      ###   ########.fr       */
+/*   Updated: 2022/07/24 15:41:55 by guillemette      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 ** ------------------------------- CONSTRUCTOR --------------------------------
 */
 
-ClapTrap::ClapTrap() : _name("Default"), _hitPoints(10), _energyPoints(10), _attackDamage(0)
+ClapTrap::ClapTrap() : _hitPoints(10), _energyPoints(10), _attackDamage(0)
 {
 	std::cout << "ClapTrap default constructor called" << std::endl;
 }
