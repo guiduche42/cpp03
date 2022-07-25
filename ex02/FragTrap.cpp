@@ -9,7 +9,7 @@ FragTrap::FragTrap()
 	this->_hitPoints = 100;
 	this->_energyPoints = 100;
 	this->_attackDamage = 30;
-	std::cout << "FragTrap default constructor called" << std::endl;
+	std::cout << "FragTrap default constructor called." << std::endl;
 }
 
 FragTrap::FragTrap(std::string name)
@@ -23,7 +23,7 @@ FragTrap::FragTrap(std::string name)
 
 FragTrap::FragTrap( const FragTrap & src )
 {
-	std::cout << "FragTrap copy constructor called" << std::endl;
+	std::cout << "FragTrap copy constructor called." << std::endl;
 	*this = src;
 }
 

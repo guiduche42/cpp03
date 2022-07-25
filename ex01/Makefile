@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: gduchate <gduchate@student.42.fr>          +#+  +:+       +#+         #
+#    By: guillemetteduchateau <guillemetteduchat    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/04 12:34:39 by guillemette       #+#    #+#              #
-#    Updated: 2022/07/17 18:20:13 by gduchate         ###   ########.fr        #
+#    Updated: 2022/07/25 18:58:48 by guillemette      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,3 +39,5 @@ fclean:			clean
 	${RM} ${NAME}
 
 re:				fclean all
+
+.PHONY:			all clean fclean re

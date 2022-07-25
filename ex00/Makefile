@@ -6,7 +6,7 @@
 #    By: guillemetteduchateau <guillemetteduchat    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/04 12:34:39 by guillemette       #+#    #+#              #
-#    Updated: 2022/07/17 12:55:31 by guillemette      ###   ########.fr        #
+#    Updated: 2022/07/25 18:57:41 by guillemette      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,3 +40,5 @@ fclean:			clean
 	${RM} ${NAME}
 
 re:				fclean all
+
+.PHONY:			all clean fclean re
